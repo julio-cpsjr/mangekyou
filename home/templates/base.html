@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}" defer></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}" defer></script>
+    <link rel="icon" href="{% static 'img/favicon.png'%}" type="image/x-icon" style="width: 10%;">
+    <style>
+        body{
+            background-color:#d7dacf;
+        }
+        #navlinks, #footerbar{
+            background-color: #65727a;
+        }
+        #mylinks{
+            background-color: #8f9a9c;
+
+        }
+
+        #button_1:hover{
+            background-color: #8f9a9c;
+        }
+        #button_2:hover{
+            background-color: #8f9a9c;
+        }
+        #button_3:hover{
+            background-color: #8f9a9c;
+        }
+        #button_4:hover{
+            background-color: #8f9a9c;
+        }
+    </style>
+    {% block title%}
+    <title>Mangekyou</title>
+    {% endblock %}
+</head>
+<body>
+    {% block navegacao %}
+    <ui id="navlinks" class="nav ms-sm-auto justify-content-lg-center">
+        <li class="nav-item ms-sm-3 mt-sm-2 mt-lg-3 mb-lg-3">
+            <img class="w-50 " src="{% static 'img/madara_nav.png'%}"  alt="nav_img" ></img>
+        </li>
+        <li class="nav-item  mt-lg-3 ">
+            <button type="button"  id="button_1"class="btn rounded">
+                <a id="home" href="{% url 'index' %}" class="nav-link active text-light fs-4">Home</a>
+            </button>
+        </li>
+        <li class="nav-item  mt-lg-3">
+            <button type="button"  id="button_2"class="btn rounded">
+                <a href="{% url 'projects' %}" class="nav-link text-light fs-4" >Projects</a>
+            </button>
+        </li>
+        <li class="nav-item  mt-lg-3">
+            <button type="button"  id="button_3"class="btn rounded">
+                <a href="{% url 'budget' %}" class="nav-link text-light fs-4 " >Budget</a>
+            </button>
+        </li>
+        <li class="nav-item   mt-lg-3">
+            <button type="button"  id="button_4"class="btn rounded">
+                <a href="{% url 'about' %}" class="nav-link text-light fs-4 " >About</a>
+            </button>
+        </li>
+    </ui>
+    {% endblock%}
+
+    {% block conteudo %}   
+    {% endblock %}
+
+
+
+    {% block mylinks %}
+    <div id="mylinks" class="container-fluid p-3">
+        <div class="row justify-content-around text-light mb-2">
+            <div class="col-auto">links</div>
+            <div class="col-auto">links</div>
+            <div class="col-auto">links</div>
+        </div>
+        <div class="row justify-content-around text-light mb-2">
+            <div class="col-auto">links</div>
+            <div class="col-auto">links</div>
+            <div class="col-auto">links</div>
+        </div>
+        <div class="row justify-content-around text-light mb-2">
+            <div class="col-auto">links</div>
+            <div class="col-auto">links</div>
+            <div class="col-auto">links</div>
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    {% block rodape %}
+    <div id="footerbar" class="container-fluid text-light p-3">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <img src="{% static 'img/madara_nav.png'%}" alt="madara_footer" style="width: 30%;">
+            </div>
+            <div class="col-auto text-bg-dark mt-2">
+                &copy; 2024
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

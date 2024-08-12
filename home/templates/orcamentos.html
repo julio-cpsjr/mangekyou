@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}
+<title>Orçamentos</title>
+{% endblock%}
+
+{% block conteudo%}
+<div class="container">
+    <p class="display-4"><strong>Orçamento</strong></p>
+    <img class="img-thumbnail float-end ms-lg-10" src="{% static 'img/madara_4.png'%}" alt="madara_form" style="width: 30%;">
+    <div class="container p-5 bg-dark ms-2 mb-5 rounded col-lg-5 col-sm-4 col-md-8">
+        <form>
+            <div class="mb-3">
+                <label for="nome" class="form-label text-light" >Nome</label>
+                <input type="text" class="form-control" placeholder="Digite seu nome" id="nome">
+                <div></div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label text-light" >E-mail</label>
+                <input type="email" id="email" class="form-control" placeholder="Digite seu e-mail">
+                <div class="form-text">Nunca compartilharemos seu email com terceiros</div>
+            </div>
+            <div class="mb-3">
+                <label for="empresa" class="form-label text-light">Empresa</label>
+                <input type="text" class="form-control" placeholder="Digite o nome da empresa" id="empresa">
+                <div></div>
+            </div>
+            <div class="mb-3">
+                <label for="telefone" class="form-label text-light">Telefone</label>
+                <input type="number" class="form-control" placeholder="Digite seu telefone" id="telefone">
+                <div class="form-text">(xx)xxxxx-xxxx</div>
+            </div>
+            <div class="mb-3">
+                <label for="motivo" class="form-label text-light">Comentário</label>
+                <textarea type="text" class="form-control" id="motivo" rows="10" cols="40"></textarea>
+                <div></div>
+            </div>
+            <button type="submit" class="btn btn-danger">Enviar</button>
+        </form>
+    </div>
+    
+</div>
+{% endblock %}
